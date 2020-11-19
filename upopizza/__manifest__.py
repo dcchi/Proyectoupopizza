@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        
+        Long description of module's purpose
     """,
 
     'author': "My Company",
@@ -27,7 +27,6 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/cliente_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

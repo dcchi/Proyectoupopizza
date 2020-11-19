@@ -1,0 +1,5 @@
+<odoo>
+    <record id="group_megamarket_ manager" model="res.groups">
+        <field name="name">MegaMarket / Manager</field>
+    </record>
+</odoo>
