@@ -13,6 +13,7 @@ class Repartidor(models.Model):
     DNI = fields.Char(string="DNI", required=True, help="DNI del cliente")
     direccion = fields.Char(string="Direccion", required=False, help="Direccion del cliente")
     telefono = fields.Integer("Telefono")
+    photo=fields.Binary('Photo')
     email = fields.Char(string="Email", required=True, help="Email del cliente")
-    idRepartidor = fields.Integer("ID")
+    idRepartidor = fields.Integer("ID")   
     _sql_constraints = [('upopizza_repartidor_name_unique', 'UNIQUE (name)', 'El DNI debe ser único')]
