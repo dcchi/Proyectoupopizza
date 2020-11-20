@@ -3,14 +3,14 @@
     'name': "upopizza",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Módulo de Gestión de UPOpizza
+        """,
 
     'description': """
-        Long description of module's purpose
+        Módulo Gestión de Pizzería
     """,
 
-    'author': "My Company",
+    'author': "Miguel Esteban Barba, Daniel Costel Chivu",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -24,9 +24,11 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
+        'views/templates.xml'
+   
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,5 +1,5 @@
 <odoo>
-    <record id="group_megamarket_ manager" model="res.groups">
-        <field name="name">MegaMarket / Manager</field>
+    <record id="group_upopizza_manager" model="res.groups">
+        <field name="name">Upopizza / Manager</field>
     </record>
 </odoo>

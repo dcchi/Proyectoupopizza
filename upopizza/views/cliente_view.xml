@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <record model="ir.ui.view" id="upopizza_cliente_form_view">
+			<field name="name">upopizza_cliente_form_view</field>
+			<field name="model">upopizza.cliente</field>
+			<field name="arch" type="xml">
+                <form string="Formulario de clientes">
+					<group string="Cliente">
+						<group colspan="4">
+							<field name="name" />
+						</group>
+                        <notebook colspan="4">
+							<page string="Datos del cliente">
+								<group>
+									<field name="nombre" />
+									<field name="apellidos" />
+									<field name="telefono" />
+									<field name="direccion" />
+								</group>
+							</page>
+                        </notebook>
+					</group>
+				</form>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="upopizza_cliente_tree_view">
+			<field name="name">upopizzacliente_tree_view</field>
+			<field name="model">upopizza.cliente</field>
+			<field name="arch" type="xml">
+				<tree string="Lista de clientes">
+					<field name="nombre" />
+					<field name="apellidos" />
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
