@@ -27,16 +27,12 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
-<<<<<<< HEAD
         'views/templates.xml'
    
-=======
-        'views/templates.xml',
-        'views/cliente_view.xml'
->>>>>>> 284fc9b057b8e78abcf31d14c9ee607b9df4be46
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
-    ],
+    ],'application': True,
+    
 }
