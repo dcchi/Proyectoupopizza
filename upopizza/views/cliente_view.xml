@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
-        <record model="ir.ui.view" id="upopizza_cliente_form_view">
+		<record model="ir.ui.view" id="upopizza_cliente_form_view">
 			<field name="name">upopizza_cliente_form_view</field>
 			<field name="model">upopizza.cliente</field>
 			<field name="arch" type="xml">
-                <form string="Formulario de clientes">
+				<form string="Formulario de Clientes">
 					<group string="Cliente">
 						<group colspan="4">
 							<field name="name" />
 						</group>
-                        <notebook colspan="4">
+						<notebook colspan="4">
 							<page string="Datos del cliente">
 								<group>
 									<field name="nombre" />
 									<field name="apellidos" />
 									<field name="telefono" />
 									<field name="direccion" />
+									<field name="email" />
+									<field name="telefono" />
 								</group>
 							</page>
-                        </notebook>
+						</notebook>
 					</group>
 				</form>
 			</field>
 		</record>
-        <record model="ir.ui.view" id="upopizza_cliente_tree_view">
-			<field name="name">upopizzacliente_tree_view</field>
+
+		<record model="ir.ui.view" id="upopizza_cliente_tree_view">
+			<field name="name">upopizza_cliente_tree_view</field>
 			<field name="model">upopizza.cliente</field>
 			<field name="arch" type="xml">
 				<tree string="Lista de clientes">
 					<field name="nombre" />
 					<field name="apellidos" />
 					<field name="name" />
+					<field name="email" />
+					<field name="telefono" />
 				</tree>
 			</field>
 		</record>
+
+		<record id="cliente_list_action" model="ir.actions.act_window">
+			<field name="name">Clientes</field>
+			<field name="res_model">upopizza.cliente</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Crear el primer cliente</p>
+			</field>
+		</data>
+	</odoo>
