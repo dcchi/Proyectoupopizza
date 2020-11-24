@@ -1,0 +1,52 @@
+<odoo>
+    <record model="ir.ui.view" id="upopizza_repartidor_form_view">
+        <field name="name">upopizza_repartidor_form_view</field>
+        <field name="model">upopizza.repartidor</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de los repartidors">
+                <group string="repartidor">
+                    <group colspan="4">
+                        <field name="name" />
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Datos del repartidor">
+                            <group>
+                                <field name="name" />
+                                <field name="nombre" />
+                                <field name="apellidos" />
+                                <field name="direccion" />
+                                <field name="telefono" />
+                                <field name="fotografia"/>
+                                <field name="email"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="upopizza_repartidor_tree_view">
+        <field name="name">upopizza_repartidor_tree_view</field>
+        <field name="model">upopizza.repartidor</field>
+        <field name="arch" type="xml">
+            <tree string="Lista de repartidores">
+                <field name="name" />
+                <field name="nombre" />
+                <field name="apellidos" />
+                <field name="direccion" />
+                <field name="telefono" />
+                <field name="fotografia"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+    <record id="repartidor_list_action" model="ir.actions.act_window">
+        <field name="name">repartidor</field>
+        <field name="res_model"upopizza.repartidor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el primer repartidor</p>
+        </field>
+    </record>
+</odoo>

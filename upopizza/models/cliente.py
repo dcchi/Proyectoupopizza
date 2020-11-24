@@ -7,7 +7,7 @@ class cliente(models.Model):
     _name = 'upopizza.cliente'
     _description = 'Upopizza Cliente'
 
-    name = fields.Char('DNI', size=9, required=True)
+    name = fields.Char(string="DNI", size=9, required=True)
     nombre = fields.Char(string="Nombre", required=True,
                          help="Nombre del cliente")
     apellidos = fields.Char(string="Apellidos", required=True,
@@ -17,6 +17,4 @@ class cliente(models.Model):
     telefono = fields.Integer("Telefono")
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
-    pedido_id = fields.One2many('upopizza.pedido', 'pedido_id', 'Pedidos')
-    _sql_constraints = [('upopizza_cliente_name_unique',
-                         'UNIQUE (dni)', 'El DNI debe ser único')]
+    #pedido_id = fields.One2many('upopizza2.pedido', 'pedido_id', 'Pedidos')

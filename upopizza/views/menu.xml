@@ -1,0 +1,19 @@
+<odoo>
+  <!-- Top menu item -->
+  <menuitem name="Upopizza" id="main_upopizza_menu" groups="group_upopizza_manager"/>
+
+  <!-- menu categories -->
+  <menuitem name="Upopizza" id="upopizza_menu" groups="group_upopizza_manager" parent="main_upopizza_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Cliente" id="cliente_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="cliente_list_action"/>
+
+  <menuitem name="Cocinero" id="cocinero_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="cocinero_list_action"/>
+
+  <menuitem name="Metododepago" id="metododepago_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="metododepago_list_action"/>
+
+  <menuitem name="Pizza" id="pizza_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="pizza_list_action"/>
+
+  <menuitem name="Repartidor" id="repartidor_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="repartidor_list_action"/>
+
+</odoo>

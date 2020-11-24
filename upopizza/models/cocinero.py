@@ -7,7 +7,7 @@ class cocinero(models.Model):
     _name = 'upopizza.cocinero'
     _description = ' Upopizza Cocinero'
 
-    _name = fields.Char('DNI', size=9, required=True)
+    name = fields.Char(string="DNI", size=9, required=True)
     nombre = fields.Char(string="Nombre", required=True,
                          help="Nombre del cocinero")
     apellidos = fields.Char(
@@ -17,6 +17,4 @@ class cocinero(models.Model):
     email = fields.Char(string="Email", required=True,
                         help="Email del Cocinero")
     telefono = fields.Integer("Telefono")
-    pedido_id = fields.One2many('upopizza.pedido', 'cocinero_id', 'Pedidos')
-    _sql_constraints = [('upopizza_cocinero_name_unique',
-                         'UNIQUE (name)', 'El DNI debe ser único')]
+    #pedido_id = fields.One2many('upopizza2.pedido', 'cocinero_id', 'Pedidos')

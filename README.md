@@ -1,2 +1,0 @@
-# Proyectoupopizza
-Trabajo TSI
