@@ -17,4 +17,4 @@ class cliente(models.Model):
     telefono = fields.Integer("Telefono")
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
-    #pedido_id = fields.One2many('upopizza2.pedido', 'pedido_id', 'Pedidos')
+    pedido_id = fields.One2many('upopizza.pedido', 'cliente_id', 'Pedidos')

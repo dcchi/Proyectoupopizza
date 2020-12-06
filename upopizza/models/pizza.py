@@ -9,9 +9,10 @@ class pizza(models.Model):
 
     name = fields.Char(string="Nombre pizza", size=60,
                        required=True, help="Nombre de la Pizza")
-    precio = fields.Integer("PrecioporUnidad")
+    precio = fields.Float("PrecioporUnidad")
     descripcion = fields.Char(string="Descripcion",
                               required=True, help="Descripcion de la Pizza")
-    ingredientes = fields.Char(string="Ingredientes", required=True, help="Ingredientes")
-    #linea_id = fields.One2many(
-    #    'upopizza.reparto', 'pizza_id', 'Lineas')
+    ingredientes = fields.Char(
+        string="Ingredientes", required=True, help="Ingredientes")
+    linea_id = fields.One2many(
+        'upopizza.lineapedido', 'pizza_id', 'Lineas')

@@ -33,6 +33,7 @@
 				<field name="apellidos"/>
 				<field name="email"/>
 				<field name="telefono" />
+				<field name="pedido_id" widget="one2many"/>
 			</tree>
 		</field>
 	</record>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="upopizza_factura_tree_view" model="ir.ui.view">
+        <field name="name">upopizza.factura.tree</field>
+        <field name="model">upopizza.factura</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="name" />
+                <field name="descripcion"/>
+                <field name="cantidadsinIVA"/>
+                <field name="cantidadconIVA"/>
+                <field name="pago_id" widget="many2one"/>
+            </tree>
+        </field>
+    </record>
+    <record id="factura_list_action" model="ir.actions.act_window">
+        <field name="name">Factura</field>
+        <field name="res_model">upopizza.factura</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Crear la primera factura</p>
+        </field>
+    </record>
+</odoo>

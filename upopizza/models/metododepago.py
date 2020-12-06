@@ -11,4 +11,4 @@ class metododepago(models.Model):
                        required=True, help="Nombre del método pago")
     descripcion = fields.Char(
         string="Descripcion Pago", required=True, help="Descripción del Método")
-    #pago_id = fields.One2many('upopizza.pago', 'metododepago_id', 'Pagos')
+    pago_id = fields.One2many('upopizza.pago', 'metodopago_id', 'Pagos')

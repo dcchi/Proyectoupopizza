@@ -10,4 +10,5 @@ class albaran(models.Model):
     name = fields.Char(string="IDalbaran", size=60, required=True)
     observaciones = fields.Char(
         string="Observaciones", required=True, help="Observaciones del albarán")
-    pedido_id = fields.One2many('upopizza2.pedido', 'albaran_id', 'Pedidos')
+    pedido_id = fields.One2many('upopizza.pedido', 'albaran_id', 'Pedidos')
+ 

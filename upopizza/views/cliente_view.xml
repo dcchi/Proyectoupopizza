@@ -17,6 +17,7 @@
 								<field name="telefono" />
 								<field name="direccion" />
 								<field name="email" />
+								<field name="pedido_id" widget="one2many" />
 							</group>
 						</page>
 					</notebook>
@@ -34,11 +35,12 @@
 				<field name="apellidos" />
 				<field name="email" />
 				<field name="telefono" />
+				<field name="pedido_id" widget="one2many" />
 			</tree>
 		</field>
 	</record>
 	<record id="cliente_list_action" model="ir.actions.act_window">
-		<field name="name">Clientes</field>
+		<field name="name">Cliente</field>
 		<field name="res_model">upopizza.cliente</field>
 		<field name="view_mode">tree,form</field>
 		<field name="help" type="html">

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="upopizza_lineapedido_tree_view" model="ir.ui.view">
+        <field name="name">upopizza.lineapedido.tree</field>
+        <field name="model">upopizza.lineapedido</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="cantidad" />
+                <field name="pedido_id" widget="one2many" />
+                <field name="pizza_id" widget="many2one"/>
+            </tree>
+        </field>
+    </record>
+    <record id="lineapedido_list_action" model="ir.actions.act_window">
+        <field name="name">LineaPedido</field>
+        <field name="res_model">upopizza.lineapedido</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Crear la primera Linea de pedido</p>
+        </field>
+    </record>
+</odoo>

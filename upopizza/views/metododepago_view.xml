@@ -8,6 +8,7 @@
                     <group>
                         <field name="name" />
                         <field name="descripcion" />
+                        <field name="pago_id" widget="one2many"/>
                     </group>
                 </sheet>
             </form>
@@ -21,11 +22,12 @@
             <tree string="tree_string">
                 <field name="name" />
                 <field name="descripcion" />
+                <field name="pago_id" widget="one2many"/>
             </tree>
         </field>
     </record>
     <record id="metododepago_list_action" model="ir.actions.act_window">
-        <field name="name">Metodo de pago</field>
+        <field name="name">Método de pago</field>
         <field name="res_model">upopizza.metododepago</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

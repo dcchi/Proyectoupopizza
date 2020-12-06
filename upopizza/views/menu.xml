@@ -16,4 +16,17 @@
 
   <menuitem name="Repartidor" id="repartidor_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="repartidor_list_action"/>
 
+  <menuitem name="Albarán" id="albaran_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="albaran_list_action"/>
+  
+  <menuitem name="Pedido" id="pedido_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="pedido_list_action"/>
+
+  <menuitem name="Reparto" id="reparto_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="reparto_list_action"/>
+  
+  <menuitem name="Pago" id="pago_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="pago_list_action"/>
+  
+  <menuitem name="Linea de Pedido" id="lineapedido_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="lineapedido_list_action"/>
+  
+  <menuitem name="Factura" id="factura_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="factura_list_action"/>
+
+
 </odoo>

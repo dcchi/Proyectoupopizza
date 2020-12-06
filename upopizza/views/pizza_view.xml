@@ -12,6 +12,7 @@
                                 <field name="precio" />
                                 <field name="descripcion" />
                                 <field name="ingredientes" />
+                                <field name="linea_id" widget="one2many"/>
                             </group>
                         </page>
                     </notebook>
@@ -29,11 +30,12 @@
                 <field name="precio" />
                 <field name="descripcion" />
                 <field name="ingredientes" />
+                <field name="linea_id" widget="one2many"/>
             </tree>
         </field>
     </record>
     <record id="pizza_list_action" model="ir.actions.act_window">
-        <field name="name">Metodo de pago</field>
+        <field name="name">Pizza</field>
         <field name="res_model">upopizza.pizza</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

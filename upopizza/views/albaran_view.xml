@@ -1,0 +1,37 @@
+<odoo>
+    <record id="upopizza_albaran_form_view" model="ir.ui.view">
+        <field name="name">upopizza.albaran.form</field>
+        <field name="model">upopizza.albaran</field>
+        <field name="arch" type="xml">
+            <form string="albaran">
+                <sheet layout="auto">
+                    <group>
+                        <field name="name" />
+                        <field name="observaciones"/>
+                        <field name="pedido_id" widget="one2many" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="upopizza_albaran_tree_view" model="ir.ui.view">
+        <field name="name">upopizza.albaran.tree</field>
+        <field name="model">upopizza.albaran</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="name" />
+                <field name="observaciones"/>
+                <field name="pedido_id" widget="one2many"/>
+            </tree>
+        </field>
+    </record>
+    <record id="albaran_list_action" model="ir.actions.act_window">
+        <field name="name">Albarán</field>
+        <field name="res_model">upopizza.albaran</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Asocia el primer albarán</p>
+        </field>
+    </record>
+</odoo>

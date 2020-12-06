@@ -26,11 +26,17 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'views/pedido_view.xml',
+        'views/reparto_view.xml',
         'views/cliente_view.xml',
         'views/cocinero_view.xml',
         'views/metododepago_view.xml',
         'views/pizza_view.xml',
         'views/repartidor_view.xml',
+        'views/albaran_view.xml',
+        'views/pago_view.xml',
+        'views/lineapedido_view.xml',
+        'views/factura_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

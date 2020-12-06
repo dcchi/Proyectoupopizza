@@ -4,3 +4,9 @@ cocinero_manager,cocinero_manager,model_upopizza_cocinero,group_upopizza_manager
 metododepago_manager,metododepago_manager,model_upopizza_metododepago,group_upopizza_manager,1,1,1,1
 pizza_manager,pizza_manager,model_upopizza_pizza,group_upopizza_manager,1,1,1,1
 repartidor_manager,repartidor_manager,model_upopizza_repartidor,group_upopizza_manager,1,1,1,1
+albaran_manager,albaran_manager,model_upopizza_albaran,group_upopizza_manager,1,1,1,1
+pedido_manager,pedido_manager,model_upopizza_pedido,group_upopizza_manager,1,1,1,1
+reparto_manager,reparto_manager,model_upopizza_reparto,group_upopizza_manager,1,1,1,1
+pago_manager,pago_manager,model_upopizza_pago,group_upopizza_manager,1,1,1,1
+lineapedido_manager,lineapedido_manager,model_upopizza_lineapedido,group_upopizza_manager,1,1,1,1
+factura_manager,factura_manager,model_upopizza_factura,group_upopizza_manager,1,1,1,1
