@@ -12,3 +12,4 @@ class pago(models.Model):
     pedido_id = fields.One2many('upopizza.pedido', 'pago_id', 'Pedidos')
     factura_id = fields.One2many('upopizza.factura', 'pago_id', 'Facturas')
     metodopago_id = fields.Many2one('upopizza.metododepago', string="Metodos")
+    _sql_constraints = [('pagos_name_unique','UNIQUE (name)','El identificador del pago debe ser único')]

@@ -20,3 +20,4 @@ class repartidor(models.Model):
     photo = fields.Binary('Photo')
     email = fields.Char(string="Email", required=True,
                         help="Email del repartidor")
+    _sql_constraints = [('repartidores_name_unique','UNIQUE (name)','El DNI del repartidor debe ser único')]

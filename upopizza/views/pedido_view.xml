@@ -12,7 +12,18 @@
                 <field name="pago_id" widget="many2one" />
                 <field name="albaran_id" widget="many2one" />
                 <field name="linea_id" widget="many2one" />
+                <field name="diaPedido"/>
+                <field name="entregaAproximada"/>
             </tree>
+        </field>
+    </record>
+    <record id="upopizza_pedido_calendar_view" model="ir.ui.view">
+        <field name="name">upopizza.pedido.calendar</field>
+        <field name="model">upopizza.pedido</field>
+        <field name="arch" type="xml">
+            <calendar string="Pedidos"  date_start="diaPedido" date_stop="entregaAproximada" mode="month">
+            <field name="name" />
+            </calendar>
         </field>
     </record>
     <record id="pedido_list_action" model="ir.actions.act_window">

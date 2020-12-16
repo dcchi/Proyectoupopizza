@@ -1,29 +1,18 @@
 <odoo>
-  <data>
-    <record id="object0" model="upopizza.upopizza">
-      <field name="name">Object 0</field>
-      <field name="value">0</field>
-    </record>
-
-    <record id="object1" model="upopizza.upopizza">
-      <field name="name">Object 1</field>
-      <field name="value">10</field>
-    </record>
-
-    <record id="object2" model="upopizza.upopizza">
-      <field name="name">Object 2</field>
-      <field name="value">20</field>
-    </record>
-
-    <record id="object3" model="upopizza.upopizza">
-      <field name="name">Object 3</field>
-      <field name="value">30</field>
-    </record>
-
-    <record id="object4" model="upopizza.upopizza">
-      <field name="name">Object 4</field>
-      <field name="value">40</field>
-    </record>
-
-  </data>
+  <record id="cliente1" model="upopizza.cliente">
+    <field name="name">77925512X</field>
+    <field name="nombre">Armando</field>
+    <field name="apellidos">Bronca</field>
+    <field name="direccion">Calle de la Thortilla</field>
+    <field name="telefono">666777888</field>
+    <field name="email">thortillon@yimail.com</field>
+  </record>
+  <record id="cliente2" model="upopizza.cliente">
+    <field name="name">1234512X</field>
+    <field name="nombre">Paca</field>
+    <field name="apellidos">Garte</field>
+    <field name="direccion">Calle Ana Tomía</field>
+    <field name="telefono">666999888</field>
+    <field name="email">pacarte@yimail.com</field>
+  </record>
 </odoo>

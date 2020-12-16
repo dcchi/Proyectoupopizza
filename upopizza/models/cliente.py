@@ -18,3 +18,4 @@ class cliente(models.Model):
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
     pedido_id = fields.One2many('upopizza.pedido', 'cliente_id', 'Pedidos')
+    _sql_constraints = [('clientes_name_unique','UNIQUE (name)','El DNI debe ser único')]

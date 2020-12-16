@@ -18,3 +18,4 @@ class cocinero(models.Model):
                         help="Email del Cocinero")
     telefono = fields.Integer("Telefono")
     pedido_id = fields.One2many('upopizza.pedido', 'cocinero_id', 'Pedidos')
+    _sql_constraints = [('cocineros_name_unique','UNIQUE (name)','El DNI debe ser único')]

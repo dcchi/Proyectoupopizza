@@ -14,7 +14,7 @@
         </field>
     </record>
     <record id="pago_list_action" model="ir.actions.act_window">
-        <field name="name">pago</field>
+        <field name="name">Pago</field>
         <field name="res_model">upopizza.pago</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

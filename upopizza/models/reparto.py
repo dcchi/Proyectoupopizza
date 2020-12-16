@@ -11,3 +11,4 @@ class reparto(models.Model):
     tiempoentrega = fields.Integer("Tiempo")
     repartidor_id = fields.Many2one('upopizza.repartidor', 'Repartidor')
     pedido_id = fields.One2many('upopizza.pedido', 'reparto_id', 'Pedidos')
+    _sql_constraints = [('repartos_name_unique','UNIQUE (name)','El identificador del reparto debe ser único')] 

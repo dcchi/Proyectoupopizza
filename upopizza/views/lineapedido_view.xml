@@ -5,6 +5,7 @@
         <field name="model">upopizza.lineapedido</field>
         <field name="arch" type="xml">
             <tree string="tree_string">
+                <field name="name" />
                 <field name="cantidad" />
                 <field name="pedido_id" widget="one2many" />
                 <field name="pizza_id" widget="many2one"/>

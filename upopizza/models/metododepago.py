@@ -12,3 +12,4 @@ class metododepago(models.Model):
     descripcion = fields.Char(
         string="Descripcion Pago", required=True, help="Descripción del Método")
     pago_id = fields.One2many('upopizza.pago', 'metodopago_id', 'Pagos')
+    _sql_constraints = [('metodosdepagos_name_unique','UNIQUE (name)','El DNI debe ser único')]

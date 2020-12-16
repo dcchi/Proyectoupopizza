@@ -16,3 +16,4 @@ class pizza(models.Model):
         string="Ingredientes", required=True, help="Ingredientes")
     linea_id = fields.One2many(
         'upopizza.lineapedido', 'pizza_id', 'Lineas')
+    _sql_constraints = [('pizzas_name_unique','UNIQUE (name)','El nombre de la pizza debe ser único')]
