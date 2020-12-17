@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import re
 from odoo import models, fields, api
 
 
@@ -18,4 +18,20 @@ class cliente(models.Model):
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
     pedido_id = fields.One2many('upopizza.pedido', 'cliente_id', 'Pedidos')
-    _sql_constraints = [('clientes_name_unique','UNIQUE (name)','El DNI debe ser único')]
+    _sql_constraints = [
+        ('clientes_name_unique', 'UNIQUE (name)', 'El DNI debe ser único')]
+
+    @api.onchange('email')
+    def validar_email(self):
+        if self.email:
+            match = re.match(
+                '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', self.email)
+            if match == None:
+                raise models.ValidationError('No es un email válido.')
+
+    @api.onchange('name')
+    def validar_dni(self):
+        if self.name:
+            match = re.match('\d{8}[a-zA-Z]$', self.name)
+            if match == None:
+                raise models.ValidationError('No es un DNI válido.')
