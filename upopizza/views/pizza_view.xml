@@ -11,6 +11,7 @@
                                 <field name="name" />
                                 <field name="precio" />
                                 <field name="descripcion" />
+                                <field name="imagen" widget="image"/>
                                 <field name="ingredientes" />
                                 <field name="linea_id" widget="one2many"/>
                             </group>
@@ -29,6 +30,7 @@
                 <field name="name" />
                 <field name="precio" />
                 <field name="descripcion" />
+                <field name="imagen" widget="image"/>
                 <field name="ingredientes" />
                 <field name="linea_id" widget="one2many"/>
             </tree>

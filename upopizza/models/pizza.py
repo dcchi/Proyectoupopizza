@@ -12,6 +12,7 @@ class pizza(models.Model):
     precio = fields.Float("PrecioporUnidad", required= True)
     descripcion = fields.Char(string="Descripcion",
                               required=True, help="Descripcion de la Pizza")
+    imagen= fields.Binary("Foto de la pizza")
     ingredientes = fields.Char(
         string="Ingredientes", required=True, help="Ingredientes")
     linea_id = fields.One2many(

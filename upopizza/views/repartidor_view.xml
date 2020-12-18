@@ -26,7 +26,6 @@
             </form>
         </field>
     </record>
-
     <record model="ir.ui.view" id="upopizza_repartidor_tree_view">
         <field name="name">upopizza_repartidor_tree_view</field>
         <field name="model">upopizza.repartidor</field>

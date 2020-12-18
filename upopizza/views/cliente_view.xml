@@ -16,6 +16,7 @@
 								<field name="apellidos" />
 								<field name="telefono" />
 								<field name="direccion" />
+								<field name="photo" widget="image" class="oe_avatar"/>
 								<field name="email" />
 								<field name="pedido_id" widget="one2many" />
 							</group>
@@ -35,6 +36,7 @@
 				<field name="apellidos" />
 				<field name="email" />
 				<field name="telefono" />
+				<field name="photo" widget="image" class="oe_avatar"/>
 				<field name="pedido_id" widget="one2many" />
 			</tree>
 		</field>

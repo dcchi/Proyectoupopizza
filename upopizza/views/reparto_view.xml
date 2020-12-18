@@ -20,4 +20,15 @@
             <p>Crear el primer reparto</p>
         </field>
     </record>
+    <record id="upopizza_reparto_search_view" model="ir.ui.view">
+        <field name="name">upopizza.reparto.search</field>
+        <field name="model">upopizza.reparto</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="0" string="Agrupar por...">
+                    <filter name="group_by_dni" string="Por DNI repartidor" context="{'group_by':'repartidor_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
 </odoo>

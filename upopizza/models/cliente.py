@@ -14,6 +14,7 @@ class cliente(models.Model):
                             help="Apellidos del cliente")
     direccion = fields.Char(string="Direccion", required=False,
                             help="Direccion del cliente")
+    photo = fields.Binary('Fotografía')
     telefono = fields.Integer("Telefono")
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
