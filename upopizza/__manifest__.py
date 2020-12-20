@@ -26,6 +26,9 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/report.xml', 
+        'reports/factura_report.xml',   
+        'reports/pizza_report.xml',  
         'views/pedido_view.xml',
         'views/reparto_view.xml',
         'views/cliente_view.xml',

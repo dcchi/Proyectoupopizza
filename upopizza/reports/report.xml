@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- E2. Esquema basico -->
+    <report id="action_upopizza_pizza_report" string="Report" model="upopizza.pizza" report_type="qweb-pdf" name="upopizza.upopizza_pizza_template" />
+    <report id="report_pizza" string="Pizza report" model="upopizza.pizza" report_type="qweb-pdf" name="upopizza.report_pizza" />
+    <report id="action_upopizza_factura_report" string="Report" model="upopizza.factura" report_type="qweb-pdf" name="upopizza.upopizza_factura_template" />
+    <report id="report_factura" string="Factura report" model="upopizza.factura" report_type="qweb-pdf" name="upopizza.report_factura" />
+
+</odoo>

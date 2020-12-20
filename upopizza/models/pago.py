@@ -13,3 +13,4 @@ class pago(models.Model):
     factura_id = fields.One2many('upopizza.factura', 'pago_id', 'Facturas')
     metodopago_id = fields.Many2one('upopizza.metododepago', string="Metodos",required=True)
     _sql_constraints = [('pagos_name_unique','UNIQUE (name)','El identificador del pago debe ser único')]
+    #cantidad validación
