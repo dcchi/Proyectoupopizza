@@ -35,7 +35,6 @@
 				<field name="email"/>
 				<field name="telefono" />
 				<field name="photo" widget="image" class="oe_avatar"/>
-				<field name="pedido_id" widget="one2many"/>
 			</tree>
 		</field>
 	</record>

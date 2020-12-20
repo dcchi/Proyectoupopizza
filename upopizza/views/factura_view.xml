@@ -6,10 +6,10 @@
         <field name="arch" type="xml">
             <form string="Formulario de factura">
                 <group string="factura">
-                    <group colspan="4">
+                    <group colspan="3">
                         <field name="name" />
                     </group>
-                    <notebook colspan="4">
+                    <notebook colspan="2">
                         <page string="Datos de la factura">
                             <group>
                                 <field name="name" />
@@ -17,8 +17,7 @@
                                 <field name="cantidadsinIVA"/>
                                 <field name="cantidadconIVA"/>
                                 <field name="pago_id" widget="many2one"/>
-                                <field name="comienzo" />
-                                <field name="fin"/>
+                                <field name="fecha" />
                             </group>
                         </page>
                     </notebook>
@@ -36,8 +35,7 @@
                 <field name="cantidadsinIVA"/>
                 <field name="cantidadconIVA"/>
                 <field name="pago_id" widget="many2one"/>
-                <field name="comienzo" />
-                <field name="fin"/>
+                <field name="fecha" />
             </tree>
         </field>
     </record>
@@ -45,8 +43,12 @@
         <field name="name">upopizza.factura.calendar</field>
         <field name="model">upopizza.factura</field>
         <field name="arch" type="xml">
-            <calendar string="Factura" color="cantidadconIVA" date_start="comienzo" mode="week">
+            <calendar string="Factura" color="name" date_start="fecha" mode="month">
                 <field name="name" />
+                <field name="descripcion"/>
+                <field name="cantidadsinIVA"/>
+                <field name="cantidadconIVA"/>
+                <field name="pago_id"/>
             </calendar>
         </field>
     </record>
@@ -55,18 +57,29 @@
         <field name="model">upopizza.factura</field>
         <field name="arch" type="xml">
             <search>
-                <filter name="search_iva" string="CantidadsinIVA > 10" domain="[('cantidadsinIVA','>',10)]" />
+                <filter name="search_ivaS" string="Importe sin IVA > 10" domain="[('cantidadsinIVA','>',10)]" />
+                <filter name="search_ivaC" string="Importe con IVA > 10" domain="[('cantidadconIVA','>',10)]" />
                 <separator orientation="vertical" />
                 <group expand="0" string="Agrupar por...">
-                    <filter name="group_by_cantidad" string="CantidadsinIVA" context="{'group_by':'pago_id'}" />
+                    <filter name="group_by_pago" string="Agrupar por el pago asociado" context="{'group_by':'pago_id'}" />
                 </group>
             </search>
+        </field>
+    </record>
+    <record id="upopizza_factura_graph_view" model="ir.ui.view">
+        <field name="name">upopizza.factura.graph</field>
+        <field name="model">upopizza.factura</field>
+        <field name="arch" type="xml">
+            <graph string="Facturas">
+                <field name="name" type="row"/>
+                <field name="cantidadconIVA" type="measure"/>
+            </graph>
         </field>
     </record>
     <record id="factura_list_action" model="ir.actions.act_window">
         <field name="name">Factura</field>
         <field name="res_model">upopizza.factura</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar,graph</field>
         <field name="help" type="html">
             <p>Crear la primera factura</p>
         </field>

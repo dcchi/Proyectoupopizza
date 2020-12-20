@@ -21,15 +21,27 @@
         <field name="name">upopizza.pedido.calendar</field>
         <field name="model">upopizza.pedido</field>
         <field name="arch" type="xml">
-            <calendar string="Pedidos"  date_start="diaPedido" date_stop="entregaAproximada" mode="month">
-            <field name="name" />
+            <calendar string="Pedidos" color="name" date_start="diaPedido" mode="month">
+                <field name="name"/>
+                <field name="cliente_id"/>
             </calendar>
         </field>
     </record>
+    <record id="upopizza_pedido_graph_view" model="ir.ui.view">
+        <field name="name">upopizza.pedido.graph</field>
+        <field name="model">upopizza.pedido</field>
+        <field name="arch" type="xml">
+            <graph string="Pedidos y clientes" type="bar">
+                <field name="name" type="row"/>
+                <field name="cliente_id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <record id="pedido_list_action" model="ir.actions.act_window">
         <field name="name">Pedido</field>
         <field name="res_model">upopizza.pedido</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar,graph</field>
         <field name="help" type="html">
             <p>Crear el primer pedido</p>
         </field>

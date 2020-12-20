@@ -13,7 +13,9 @@
                                 <field name="descripcion" />
                                 <field name="imagen" widget="image"/>
                                 <field name="ingredientes" />
+                                <!--
                                 <field name="linea_id" widget="one2many"/>
+                                -->
                             </group>
                         </page>
                     </notebook>
@@ -32,7 +34,9 @@
                 <field name="descripcion" />
                 <field name="imagen" widget="image"/>
                 <field name="ingredientes" />
+                <!---
                 <field name="linea_id" widget="one2many"/>
+                -->
             </tree>
         </field>
     </record>

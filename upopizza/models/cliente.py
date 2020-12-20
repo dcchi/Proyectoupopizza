@@ -15,7 +15,7 @@ class cliente(models.Model):
     direccion = fields.Char(string="Direccion", required=False,
                             help="Direccion del cliente")
     photo = fields.Binary('Fotografía')
-    telefono = fields.Integer("Telefono")
+    telefono = fields.Char(string="Telefono", size=9, required=True)
     email = fields.Char(string="Email", required=True,
                         help="Email del cliente")
     pedido_id = fields.One2many('upopizza.pedido', 'cliente_id', 'Pedidos')
@@ -36,3 +36,10 @@ class cliente(models.Model):
             match = re.match('\d{8}[a-zA-Z]$', self.name)
             if match == None:
                 raise models.ValidationError('No es un DNI válido.')
+
+    @api.onchange('telefono')
+    def validar_dni(self):
+        if self.telefono:
+            match = re.match('\d{9}', self.telefono)
+            if match == None:
+                raise models.ValidationError('No es un teléfono válido.')

@@ -6,6 +6,7 @@
   <menuitem name="Upopizza" id="upopizza_menu" groups="group_upopizza_manager" parent="main_upopizza_menu"/>
 
   <!-- actions -->
+  
   <menuitem name="Cliente" id="cliente_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="cliente_list_action"/>
 
   <menuitem name="Cocinero" id="cocinero_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="cocinero_list_action"/>
@@ -27,6 +28,6 @@
   <menuitem name="Linea de Pedido" id="lineapedido_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="lineapedido_list_action"/>
   
   <menuitem name="Factura" id="factura_menu" parent="upopizza_menu" groups="group_upopizza_manager" action="factura_list_action"/>
-
+  
 
 </odoo>

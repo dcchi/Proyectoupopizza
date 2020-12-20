@@ -16,9 +16,9 @@
                                 <field name="apellidos" />
                                 <field name="direccion" />
                                 <field name="telefono" />
-                                <field name="reparto_id" widget="one2many"/>
                                 <field name="photo" widget="image" class="oe_avatar"/>
                                 <field name="email"/>
+                                <field name="reparto_id" widget="one2many"/>
                             </group>
                         </page>
                     </notebook>
@@ -36,9 +36,9 @@
                 <field name="apellidos" />
                 <field name="direccion" />
                 <field name="telefono" />
-                <field name="reparto_id" widget="one2many" />
                 <field name="photo" widget="image" class="oe_avatar"/>
                 <field name="email"/>
+                <field name="reparto_id" widget="one2many" />
             </tree>
         </field>
     </record>

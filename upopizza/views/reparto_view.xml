@@ -13,9 +13,9 @@
         </field>
     </record>
     <record id="reparto_list_action" model="ir.actions.act_window">
-        <field name="name">reparto</field>
+        <field name="name">Reparto</field>
         <field name="res_model">upopizza.reparto</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
         <field name="help" type="html">
             <p>Crear el primer reparto</p>
         </field>
@@ -29,6 +29,17 @@
                     <filter name="group_by_dni" string="Por DNI repartidor" context="{'group_by':'repartidor_id'}" />
                 </group>
             </search>
+        </field>
+    </record>
+    <record id="upopizza_reparto_graph" model="ir.ui.view">
+        <field name="name">upopizza.reparto.graph</field>
+        <field name="model">upopizza.reparto</field>
+        <field name="arch" type="xml">
+            <graph string="Repartos" type="bar">
+                <field name="name" type="row" />
+                <field name="repartidor_id" type="row" />
+                <field name="tiempoentrega" type="measure" />
+            </graph>
         </field>
     </record>
 </odoo>

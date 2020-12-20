@@ -21,4 +21,14 @@
             <p>Crear el primer pago</p>
         </field>
     </record>
+    <record id="upopizza_pago_graph_view" model="ir.ui.view">
+        <field name="name">upopizza.pago.graph</field>
+        <field name="model">upopizza.pago</field>
+        <field name="arch" type="xml">
+            <graph string="Pagos">
+                <field name="name" type="row"/>
+                <field name="cantidad" type="measure"/>
+            </graph>
+        </field>
+    </record>
 </odoo>

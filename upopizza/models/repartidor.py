@@ -14,13 +14,14 @@ class repartidor(models.Model):
         string="Apellidos", required=True, help="Apellidos  del repartidor")
     direccion = fields.Char(
         string="Direccion", required=False, help="Direccion  del repartidor")
-    telefono = fields.Integer("Telefono")
-    reparto_id = fields.One2many(
-        'upopizza.reparto', 'repartidor_id', 'Repartos')
+    telefono = fields.Char(string="Teléfono", size=9, required=True)
     photo = fields.Binary('Fotografía')
     email = fields.Char(string="Email", required=True,
                         help="Email del repartidor")
-    _sql_constraints = [('repartidores_name_unique','UNIQUE (name)','El DNI del repartidor debe ser único')]
+    reparto_id = fields.One2many(
+        'upopizza.reparto', 'repartidor_id', 'Repartos')
+    _sql_constraints = [('repartidores_name_unique',
+                         'UNIQUE (name)', 'El DNI del repartidor debe ser único')]
 
     @api.onchange('email')
     def validar_email(self):
@@ -36,3 +37,10 @@ class repartidor(models.Model):
             match = re.match('\d{8}[a-zA-Z]$', self.name)
             if match == None:
                 raise models.ValidationError('No es un DNI válido.')
+
+    @api.onchange('telefono')
+    def validar_dni(self):
+        if self.telefono:
+            match = re.match('\d{9}', self.telefono)
+            if match == None:
+                raise models.ValidationError('No es un teléfono válido.')

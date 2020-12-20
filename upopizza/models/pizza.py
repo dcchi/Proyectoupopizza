@@ -7,7 +7,7 @@ class pizza(models.Model):
     _name = 'upopizza.pizza'
     _description = 'Upopizza Pizza'
 
-    name = fields.Char(string="Nombre pizza", size=60,
+    name = fields.Char(string="Nombre pizza", size=30,
                        required=True, help="Nombre de la Pizza")
     precio = fields.Float("PrecioporUnidad", required= True)
     descripcion = fields.Char(string="Descripcion",

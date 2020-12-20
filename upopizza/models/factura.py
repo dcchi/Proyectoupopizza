@@ -10,12 +10,11 @@ class factura(models.Model):
     name = fields.Char(string="IdFactura", size=10, required=True)
     descripcion = fields.Char(string="Descripcion",
                               required=True, help="Descripción de Factura")
-    cantidadsinIVA = fields.Float('sinIVA')
+    cantidadsinIVA = fields.Float('Importe',required=True)
     cantidadconIVA = fields.Float(
-        compute='_calculoconIVA', string='Importe con IVA', store=True)
-    pago_id = fields.Many2one('upopizza.pago', string="Pago")
-    comienzo = fields.Datetime('Comienzo', required=True, autodate=True)
-    fin = fields.Datetime('Fin', required=True, autodate=True)
+        compute='_calculoconIVA', string='Importe con IVA', store=True, help="Cálculo del importe con la apliación del IVA")
+    pago_id = fields.Many2one('upopizza.pago', string="Pago", required=True)
+    fecha = fields.Datetime('Fecha de Emisión', required=True, autodate=True)
     _sql_constraints = [('facturas_name_unique', 'UNIQUE (name)',
                          'El identificador de la factura debe ser único')]
 
