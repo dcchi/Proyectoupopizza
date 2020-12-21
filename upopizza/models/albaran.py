@@ -10,5 +10,5 @@ class albaran(models.Model):
     name = fields.Char(string="IDalbaran", size=10, required=True)
     observaciones = fields.Char(
         string="Observaciones", required=True, help="Observaciones del albarán")
-    pedido_id = fields.One2many('upopizza.pedido', 'albaran_id', 'Pedidos',required=True)
+    pedido_id = fields.One2many('upopizza.pedido', 'albaran_id', 'Pedidos')
     _sql_constraints = [('albaranes_name_unique','UNIQUE (name)','El identificador del albarán debe ser único')]

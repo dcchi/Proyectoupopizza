@@ -2,23 +2,22 @@
     <template id="upopizza_factura_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
-                <div class="page">
-                    <h1><strong>FACTURA</strong></h1>     
+                <div class="Hoja">
+                    <h1 style="text-align:center"><strong>FACTURA</strong></h1>
                     <br/>
-                    <h2><strong>Nombre</strong></h2>                  
-                    <t t-esc="doc.name" />
+                    <p><strong>Fecha de emisión: </strong><em t-field="doc.fecha" /></p>                          
                     <br/>
-                    <h2><strong>Descripción</strong></h2> 
-                    <t t-esc="doc.descripcion" />
+                    <p><strong>Nombre: </strong><em t-field="doc.name" /></p>                  
                     <br/>
-                    <h2><strong>Importe sin IVA</strong></h2> 
-                    <t t-esc="doc.cantidadconIVA" />
+                    <p><strong>Descripción: </strong><em t-field="doc.descripcion"/></p> 
                     <br/>
-                    <h2><strong>Importe con IVA</strong></h2> 
-                    <t t-esc="doc.cantidadsinIVA" /> 
+                    <p><strong>Importe sin IVA: </strong><em t-field="doc.cantidadsinIVA"/>€</p> 
+                    <br/>
+                    <p><strong>Importe con IVA: </strong><em t-field="doc.cantidadconIVA"/>€</p> 
                     <br/>      
                 </div>
             </t>
+            <footer style="text-align:center"><h3>UPOPIZZA</h3></footer>
         </t>
     </template>
 </odoo>

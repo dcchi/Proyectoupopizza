@@ -13,7 +13,7 @@ class factura(models.Model):
     cantidadsinIVA = fields.Float('Importe',required=True)
     cantidadconIVA = fields.Float(
         compute='_calculoconIVA', string='Importe con IVA', store=True, help="Cálculo del importe con la apliación del IVA")
-    pago_id = fields.Many2one('upopizza.pago', string="Pago", required=True)
+    pago_id = fields.Many2one('upopizza.pago', string="Pago",required=True)
     fecha = fields.Datetime('Fecha de Emisión', required=True, autodate=True)
     _sql_constraints = [('facturas_name_unique', 'UNIQUE (name)',
                          'El identificador de la factura debe ser único')]
